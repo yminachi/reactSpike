@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default class UnicornListItem extends React.Component {
+
     render() {
         var itemStyle = {
             border: "1px solid #000000",
@@ -17,3 +18,15 @@ export default class UnicornListItem extends React.Component {
         )
     }
 }
+
+UnicornListItem.propTypes = {
+    unicorn: React.PropTypes.object.isRequired
+}
+
+//UnicornListItem.defaultProps = {
+//    unicorn: {
+//        "name": "defaulticorn",
+//        "magnetic": false,
+//        "powerLevel": 0
+//    }
+//}

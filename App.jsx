@@ -1,7 +1,9 @@
 import React from 'react';
 
 import Header from './Header.jsx'
-import Content from './Content.jsx'
+import UnicornList from './UnicornList.jsx'
+import MagnetAdvice from './MagnetAdvice.jsx'
+import Button from './Button.jsx'
 
 
 class App extends React.Component {
@@ -9,7 +11,9 @@ class App extends React.Component {
         return(
             <div>
                 <Header/>
-                <Content/>
+                <MagnetAdvice/>
+                <UnicornList/>
+                <Button/>
             </div>
         );
     }

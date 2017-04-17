@@ -2,7 +2,7 @@ import React from 'react';
 
 import UnicornListItem from './UnicornListItem.jsx';
 
-export default class Content extends React.Component {
+export default class UnicornList extends React.Component {
     constructor() {
         super();
 
@@ -36,8 +36,14 @@ export default class Content extends React.Component {
     }
 
     render() {
+        var itemStyle = {
+            border: "1px solid #000000",
+            margin: 10,
+            padding: 10
+        };
+
         return(
-            <div>
+            <div style={itemStyle}>
                 {this.state.unicorns.map((unicorn, i) => <UnicornListItem key = {i} unicorn = {unicorn} />)}
             </div>
         );
