@@ -1,6 +1,8 @@
 import React from 'react';
 
-export default class Button extends React.Component {
+import UnicornList from './UnicornList.jsx'
+
+export default class Toggle extends React.Component {
     constructor() {
         super();
 
