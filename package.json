@@ -4,7 +4,8 @@
   "description": "trying react JS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --hot"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,6 @@
     "react-dom": "^15.5.4",
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.2"
-  }
+  },
+  "devDependencies": {}
 }
