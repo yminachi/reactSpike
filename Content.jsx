@@ -1,6 +1,6 @@
 import React from 'react';
 
-import UnicornListItem from './UnicornListItem';
+import UnicornListItem from './UnicornListItem.jsx';
 
 export default class Content extends React.Component {
     constructor() {
