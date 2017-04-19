@@ -1,26 +1,37 @@
-import React from 'react';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { addUnicorn } from './actions/actions'
 
-import Header from './Header.jsx'
-import UnicornList from './UnicornList.jsx'
-import MagnetAdvice from './MagnetAdvice.jsx'
-import Toggle from './Toggle.jsx'
-
+import Header from './componants/Header.jsx'
+import UnicornList from './componants/UnicornList.jsx'
+import AddUnicorn from './componants/AddUnicorn.jsx'
+import MagnetAdvice from './componants/MagnetAdvice.jsx'
+import Toggle from './componants/Toggle.jsx'
 
 class App extends React.Component {
     render() {
-        var box1 = <MagnetAdvice/>;
-        var box2 = <UnicornList/>;
-        var box3 = <Toggle/>;
+        const { dispatch, unicorns } = this.props;
 
         return(
             <div>
                 <Header/>
-                {box1}
-                {box2}
-                {box3}
+                <AddUnicorn
+                    onAddClick = { unicorn => dispatch(addUnicorn(unicorn.name, unicorn.magnetic, unicorn.powerLevel)) }
+                />
+                <UnicornList unicorns={unicorns}/>
+
+                <MagnetAdvice/>
+                <Toggle/>
+
             </div>
         );
     }
 }
 
-export default App;
+function select(state) {
+    return {
+        unicorns: state.unicorns
+    }
+}
+
+export default connect(select)(App)

@@ -8,7 +8,7 @@ export default class Toggle extends React.Component {
 
         this.state = {
             backgroundOn: false
-        }
+        };
 
         this.handleClick = this.handleClick.bind(this);
     }

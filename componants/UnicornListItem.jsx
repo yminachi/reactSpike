@@ -21,12 +21,4 @@ export default class UnicornListItem extends React.Component {
 
 UnicornListItem.propTypes = {
     unicorn: React.PropTypes.object.isRequired
-}
-
-//UnicornListItem.defaultProps = {
-//    unicorn: {
-//        "name": "defaulticorn",
-//        "magnetic": false,
-//        "powerLevel": 0
-//    }
-//}
+};
