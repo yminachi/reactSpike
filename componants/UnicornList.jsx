@@ -8,15 +8,10 @@ export default class UnicornList extends React.Component {
     }
 
     render() {
-        var itemStyle = {
-            border: "1px solid #000000",
-            margin: 10,
-            padding: 10
-        };
         console.log(this.props.unicorns);
 
         return(
-            <div style={itemStyle}>
+            <div className="component">
                 {this.props.unicorns.map((unicorn, i) => <UnicornListItem key = {i} unicorn = {unicorn} />)}
             </div>
         );

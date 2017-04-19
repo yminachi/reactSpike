@@ -2,14 +2,8 @@ import React from 'react';
 
 export default class AddUnicorn extends React.Component {
     render() {
-        var itemStyle = {
-            border: "1px solid #000000",
-            margin: 10,
-            padding: 10
-        };
-
         return(
-            <div style={itemStyle}>
+            <div className="component">
                 <p>Name: <input type = 'text' ref = 'name' /></p>
                 <p>Magnetic: <input type="checkbox" ref="magnetic"/></p>
                 <p>PowerLevel <input type = 'text' ref = 'powerLevel'/></p>

@@ -16,7 +16,7 @@ class App extends React.Component {
             <div>
                 <Header/>
                 <AddUnicorn
-                    onAddClick = { unicorn => dispatch(addUnicorn(unicorn.name, unicorn.magnetic, unicorn.powerLevel)) }
+                    onAddClick = { unicorn => dispatch(addUnicorn(unicorn)) }
                 />
                 <UnicornList unicorns={unicorns}/>
 

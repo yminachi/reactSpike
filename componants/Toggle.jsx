@@ -21,14 +21,11 @@ export default class Toggle extends React.Component {
 
     render() {
         var itemStyle = {
-            border: "1px solid #000000",
-            margin: 10,
-            padding: 10,
             backgroundColor: this.state.backgroundOn ? "#ff0000": "#ffffff"
         };
 
         return(
-            <div style={itemStyle}>
+            <div  className="component" style={itemStyle}>
                 <button onClick={this.handleClick}>Press Me!</button>
             </div>
         );
