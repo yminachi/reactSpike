@@ -8,7 +8,7 @@ export default class UnicornList extends React.Component {
     }
 
     render() {
-        console.log(this.props.unicorns);
+        console.log(this.props);
 
         return(
             <div className="component">

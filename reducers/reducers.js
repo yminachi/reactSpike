@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux'
-import {ADD_UNICORN} from "../actions/actions";
+import {ADD_UNICORN, LIVE_UPDATE} from "../actions/actions";
 
 function unicorn(state, action) {
     switch (action.type) {
@@ -30,8 +30,17 @@ function unicorns(state = [], action) {
     }
 }
 
+function live(state = 'NO UPDATE YET', action) {
+    if (action.type == LIVE_UPDATE)  {
+        return action.value;
+    }
+
+    return state;
+}
+
 const unicornApp = combineReducers({
-    unicorns
+    unicorns,
+    live
 });
 
 export default unicornApp
